@@ -185,4 +185,36 @@ volunteer_connect/
     ├── pubspec.yaml
     └── README.md
 ```
+<h3>Data model and relationships</h3>
 
+```text
+Model	Important fields and relationships
+User	name, email (unique), phone, password, role (volunteer / admin / ngo), optional profile_image.
+Opportunity	title, description, ngo_name, category, location, optional latitude/longitude, date, time, volunteers_required, created_at, optional created_by_email linking it to an NGO user.
+Application	Required user and opportunity references with a unique constraint on the pair. status in {Applied, Approved, Rejected, Cancelled}. applied_date recorded automatically.
+```
+<h3>Public authentication</h3>
+
+```text
+Method	Endpoint	Description
+POST	/api/register/	Register a Volunteer or NGO account. Admin registration is rejected.
+POST	/api/login/	Authenticate and receive a safe user object.
+Users
+Method	Endpoint	Description
+GET	/api/users/{id}/	Retrieve a user profile.
+PUT	/api/users/{id}/	Update name, phone, or profile image. Role changes are not permitted.
+Opportunities
+Method	Endpoint	Description
+GET	/api/opportunities/	List opportunities with optional search, category, role, and email filters.
+GET	/api/opportunities/{id}/	Retrieve a single opportunity.
+POST	/api/opportunities/	Create an opportunity. Admin or NGO.
+PUT	/api/opportunities/{id}/	Update an opportunity. Admin or owning NGO.
+DELETE	/api/opportunities/{id}/	Delete an opportunity. Admin or owning NGO.
+GET	/api/opportunities/{id}/applicants/	List applicants for an opportunity. Admin or owning NGO.
+Applications
+Method	Endpoint	Description
+POST	/api/applications/	Apply for an opportunity. Duplicate applications are rejected.
+GET	/api/applications/user/{user_id}/	List the authenticated user's applications with status and opportunity details.
+DELETE	/api/applications/{id}/	Cancel an application. Approved applications cannot be cancelled.
+PUT	/api/applications/{id}/status/	Update application status. Admin or owning NGO only.
+```
