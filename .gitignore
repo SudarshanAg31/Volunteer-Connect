@@ -1,0 +1,183 @@
+# ============================================
+# VOLUNTEER CONNECT - ROOT .gitignore
+# ============================================
+
+# ============================================
+# DJANGO BACKEND
+# ============================================
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# Virtual Environment ❌
+backend/venv/
+backend/env/
+backend/ENV/
+backend/.venv/
+
+# Django Database ❌ MOST IMPORTANT
+backend/db.sqlite3
+backend/*.sqlite3
+backend/*.sqlite3-journal
+backend/*.sqlite
+
+# Django Static Files ❌
+backend/staticfiles/
+backend/static/
+backend/media/
+
+# Django Migrations (Optional - keep if you want)
+# backend/api/migrations/*.py
+# !backend/api/migrations/__init__.py
+
+# Environment Variables ❌
+.env
+.env.local
+.env.*.local
+*.env
+secrets.json
+
+# Logs
+*.log
+logs/
+
+# ============================================
+# FLUTTER APP
+# ============================================
+# Dart/Flutter
+.dart_tool/
+.packages
+.pub-cache/
+.pub/
+build/
+.flutter-plugins
+.flutter-plugins-dependencies
+pubspec.lock
+
+# Flutter Build Artifacts
+*.apk
+*.aab
+*.ipa
+*.flutter_assets/
+**/doc/api/
+
+# Android
+android/.gradle/
+android/.idea/
+android/local.properties
+android/key.properties
+android/app/debug/
+android/app/profile/
+android/app/release/
+android/captures/
+android/*.jks
+android/*.keystore
+android/gradle/wrapper/gradle-wrapper.jar
+android/app/src/main/java/io/flutter/plugins/GeneratedPluginRegistrant.java
+
+# iOS
+ios/Pods/
+ios/.symlinks/
+ios/Flutter/Flutter.framework
+ios/Flutter/Flutter.podspec
+ios/Flutter/Generated.xcconfig
+ios/Flutter/flutter_export_environment.sh
+ios/Flutter/.last_build_id
+ios/Runner/GeneratedPluginRegistrant.*
+
+# macOS
+macos/Flutter/GeneratedPluginRegistrant.swift
+macos/Flutter/ephemeral/
+
+# Windows
+windows/flutter/ephemeral/
+
+# Linux
+linux/flutter/ephemeral/
+
+# Web
+web/favicon.png
+
+# Flutter Generated Files
+**/GeneratedPluginRegistrant.java
+**/GeneratedPluginRegistrant.h
+**/GeneratedPluginRegistrant.m
+**/generated_plugin_registrant.h
+**/generated_plugin_registrant.cc
+**/generated_plugins.cmake
+
+# ============================================
+# IDE & EDITORS
+# ============================================
+.idea/
+.vscode/
+*.iml
+*.sublime-project
+*.sublime-workspace
+*.swp
+*.swo
+*~
+
+# ============================================
+# OS FILES
+# ============================================
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+desktop.ini
+
+# ============================================
+# DEPLOYMENT
+# ============================================
+.railway/
+.heroku/
+Procfile.local
+
+# ============================================
+# FIREBASE (if used)
+# ============================================
+google-services.json
+GoogleService-Info.plist
+firebase_options.dart
+.firebase/
+firebase-debug.log
+
+# ============================================
+# TESTING
+# ============================================
+coverage/
+.coverage
+htmlcov/
+.pytest_cache/
+.tox/
+.nox/
+
+# ============================================
+# TEMP FILES
+# ============================================
+*.tmp
+*.temp
+temp/
+tmp/
