@@ -6,10 +6,7 @@ opportunity discovery, applications, approvals, role-based dashboards,
 and administrative workflows in one protected workspace.
 
 -   **Live API:**
-    [volunteer-connect-backend-4d55.onrender.com](https://volunteer-connect-backend-4d55.onrender.com/)
--   **API Base:** `/api/`
--   **Health check:** `/api/opportunities/`
--   **Admin panel:** `/admin/`
+    [volunteer-connect-backend-4d55.onrender.com](https://volunter-connect-backend.onrender.com)
 
 > This application is an academic full-stack project. Authentication is
 > intentionally simple (plain-text credentials for demonstration), and
